@@ -1,0 +1,36 @@
+data_paths:
+  - data/sudoku-extreme-1k-aug-1000
+global_batch_size: 64
+epochs: 10000
+eval_interval: 1000
+lr: 1.0e-4
+lr_min_ratio: 1.0
+lr_warmup_steps: 2000
+beta1: 0.9
+beta2: 0.95
+weight_decay: 1.0
+puzzle_emb_lr: 1.0e-4
+puzzle_emb_weight_decay: 1.0
+arch:
+  name: models.recursive_reasoning.trm@TinyRecursiveReasoningModel_ACTV1
+  loss:
+    name: models.losses@ACTLossHead
+    loss_type: stablemax_cross_entropy
+  halt_max_steps: 16
+  halt_exploration_prob: 0.1
+  H_cycles: 3
+  L_cycles: 6
+  L_layers: 2
+  hidden_size: 512
+  num_heads: 8
+  expansion: 4
+  puzzle_emb_ndim: 512
+  pos_encodings: 'none'
+  forward_dtype: 'float32'
+  mlp_t: true
+  puzzle_emb_len: 16
+  no_ACT_continue: true
+run_name: 'pretrain_mlp_sudoku_p100_local'
+seed: 42
+ema: true
+ema_rate: 0.999
