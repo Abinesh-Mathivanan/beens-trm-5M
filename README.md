@@ -1,5 +1,7 @@
 # Tiny Recursive Model (5M Parameters)
 
+architecture reference - Less is More: Recursive Reasoning with Tiny Networks (https://arxiv.org/pdf/2510.04871)
+
 <br/>
 
 ## Project Structure
