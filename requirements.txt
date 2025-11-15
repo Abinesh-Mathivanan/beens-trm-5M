@@ -1,0 +1,12 @@
+torch
+hydra-core
+coolname
+numba
+jinja
+numpy
+pydantic
+omegaconf
+einops
+tqdm
+huggingface-hub
+scipy
