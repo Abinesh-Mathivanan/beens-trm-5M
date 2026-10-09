@@ -40,7 +40,4 @@ python pretrain.py
 ```
 <br/>
 
-## Accuracy Log 
-
-![Accuracy Chart](logs/accuracy.png)
 
